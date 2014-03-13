@@ -80,59 +80,6 @@ bool direct_mapping::isHit(int address)
 }
 
 /**
-bit_cpy is a similar type of function like strcpy,
-from source, we copy bitnumber of bits to destination
-**/
-void bit_cpy(bool *destination, bool *source, int bitnumber)
-{
-    //tested
-    int i;
-    for(i=0;i<bitnumber;i++)
-    {
-        destination[i]=source[i];
-    }
-}
-
-/**
-bit_cmp is also similar to strcmp but with much modifications,
-this function compares bitnumber of bits of both source1 and
-source2 and both of them are boolean array. Returns true if
-first bitnumber of bits of both source matches, else false.
-**/
-
-bool bit_cmp(bool *source1, bool *source2, int bitnumber)
-{
-    //tested
-    int i;
-    for(i=0;i<bitnumber;i++)
-    {
-        if(source1[i]!=source2[i])
-        {
-            return false;
-        }
-    }
-    return true;
-}
-
-/**
-turn number address into binary of bitnum bits
-**/
-void tobinary(int address, bool *dest, int bitnumber)//size is bitnum
-{
-    int i;
-    for(i=0;i<bitnumber;i++)
-    {
-        dest[i]=0;
-    }
-    i=bitnumber-1;
-    while(address)
-    {
-        dest[i--]=address%2;
-        address/=2;
-    }
-}
-
-/**
 addressParse function takes in an address and returns three integer
 first hading the msb 'first' bits, second having the middle 'second' bits
 and third having the lsb 'third' bits
