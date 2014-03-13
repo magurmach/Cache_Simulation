@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1394713243 source:g:\project\cache simulation\direct map\main.cpp
+	<stdio.h>
+	<algorithm>
+	<iostream>
+	<fstream>
+	<math.h>
+	<string.h>
+	<assert.h>
+	<cache_util.h>
+
+1394677501 source:g:\project\cache simulation\direct map\src\cache_util.cpp
+	"cache_util.h"
+	<math.h>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
