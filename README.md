@@ -1,6 +1,6 @@
 #Cache Simulation
 ----------
-This project is an effort to simulate real-time Cache management with DRAM data read/write request.
+This project is an effort to simulate real-time Cache management with DRAM data read/write request. Direst Mapping section have been completed.
 
 ##Compile and Run
 We have used a CodeBlocks setup. `Cache Simulation.cdp` will directly open the project in CodeBlocks. To compile directly, open `Makefile` and write:
@@ -10,7 +10,8 @@ We have used a CodeBlocks setup. `Cache Simulation.cdp` will directly open the p
 
 For Windows 7, open `Developer Command Prompt` of Visual Studio with command `nmake -f Makefile`
 
-##Policies
+#Policies
+##Direct Mapping Cache Simulation
 ###Write Policy:
 We will be using [**Write back**](http://en.wikipedia.org/wiki/Cache_%28computing%29#Writing_policies) as write policy. And, for a write request, if data is in the cache, data is modified with data being set as dirty. If the data is not in the cache, data is loaded to cache. And before loading if the data in that cache location is dirty, then propagation is confirmed.
 
