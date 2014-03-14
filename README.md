@@ -1,12 +1,12 @@
 #Cache Simulation
-----------
+
 This project is an effort to simulate real-time Cache management with DRAM data read/write request. Direst Mapping section have been completed.
 
 ##Compile and Run
-We have used a CodeBlocks setup. `Cache Simulation.cdp` will directly open the project in CodeBlocks. To compile directly, open `Makefile` and write:
+We have used a CodeBlocks setup. `Cache Simulation.cdp` will directly open the project in CodeBlocks. Then compile and run. To compile directly, open `Makefile` and write:
 
 	all:
-	g++ main.cpp cache_util.h cache_util.cpp -o hello.exe
+	g++ main.cpp cache_util.h cache_util.cpp -o cache.exe
 
 For Windows 7, open `Developer Command Prompt` of Visual Studio with command `nmake -f Makefile`
 
