@@ -3,12 +3,13 @@
 This project is an effort to simulate real-time Cache management with DRAM data read/write request. Direst Mapping section have been completed.
 
 ##Compile and Run
-We have used a CodeBlocks setup. `Cache Simulation.cdp` will directly open the project in CodeBlocks. Then compile and run. To compile directly, open `Makefile` and write:
+MAC and Linux supports direct `Makefile` compilation.
+The `Makefile` body will be:
 
 	all:
-	g++ main.cpp cache_util.h cache_util.cpp -o cache.exe
+		g++ main.cpp cache_util.h cache_util.cpp -o cache.exe
 
-For Windows 7, open `Developer Command Prompt` of Visual Studio with command `nmake -f Makefile`
+For Windows 7, Visual Studio is needed. An known alternate is [Unix tool for windows](http://unxutils.sourceforge.net/). To open with Visual Studio make feature, open `Developer Command Prompt` of Visual Studio from `Start Menu`. Change the directory to the folder where the codes and makefile is. Then run with command `nmake -f Makefile`.
 
 #Policies
 ##Direct Mapping Cache Simulation
@@ -27,4 +28,4 @@ Input file is read till `EOF`. Each line should have a _16 bit address_, indicat
 ###Output
 Output will be for read request only. For every read request, the program outputs the 1 byte data in **hex** and then is it a hit outputs 1, else 0. And then the initial condition of dirty bit when the read request is made.
 
-####A test input file and corresponding output file has been included.
+####A test input file and corresponding output file has been included for a 256 byte cache with 8 byte block size.
